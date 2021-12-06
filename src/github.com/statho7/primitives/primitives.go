@@ -98,7 +98,25 @@ import (
 // 	fmt.Printf("%v, %T\n",n,n)
 // }
 
+// func main() {
+// 	// s:= "this is string"
+// 	// fmt.Printf("%v, %T\n",s,s)
+
+// 	// s:= "this is string"
+// 	// fmt.Printf("%v, %T\n",s[2],s[2])
+
+// 	// s:= "this is string"
+// 	// s2 := "this is also a string"
+// 	// fmt.Printf("%v, %T\n",s + s2,s + s2)
+
+// 	s:= "this is string"
+// 	b := []byte(s)
+// 	fmt.Printf("%v, %T\n",b,b)
+// }
+
+// runes
 func main() {
-	s:= "this is string"
-	fmt.Printf("%v, %T\n",s[2],s[2])
+	// r:= 'a'
+	var r rune = 'a'
+	fmt.Printf("%v, %T\n",r,r)
 }
