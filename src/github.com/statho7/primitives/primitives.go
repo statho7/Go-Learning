@@ -19,12 +19,23 @@ import (
 // 	fmt.Printf("%v, %T\n",n,n)
 // }
 
+// func main() {
+// 	a := 10
+// 	b := 3
+// 	fmt.Println(a + b)
+// 	fmt.Println(a - b)
+// 	fmt.Println(a * b)
+// 	fmt.Println(a / b)
+// 	fmt.Println(a % b)
+// }
+
 func main() {
-	a := 10
-	b := 3
-	fmt.Println(a + b)
-	fmt.Println(a - b)
-	fmt.Println(a * b)
-	fmt.Println(a / b)
-	fmt.Println(a % b)
+	var a int = 10
+	var b int8 = 3
+	// fmt.Println(a + b) Error
+	fmt.Println(a + int(b))
+	// fmt.Println(a - b)
+	// fmt.Println(a * b)
+	// fmt.Println(a / b)
+	// fmt.Println(a % b)
 }
