@@ -57,12 +57,21 @@ import (
 // 	fmt.Println(a >> 3)
 // }
 
-//floating point numbers
+// //floating point numbers
+// func main()  {
+// 	n := 3.14
+// 	fmt.Printf("%v, %T\n",n,n)
+// 	n = 13.7e72
+// 	fmt.Printf("%v, %T\n",n,n)
+// 	n = 2.1E14
+// 	fmt.Printf("%v, %T\n",n,n)
+// }
+
 func main()  {
-	n := 3.14
-	fmt.Printf("%v, %T\n",n,n)
-	n = 13.7e72
-	fmt.Printf("%v, %T\n",n,n)
-	n = 2.1E14
-	fmt.Printf("%v, %T\n",n,n)
+	a := 10.2
+	b := 3.7
+	fmt.Println(a + b)
+	fmt.Println(a - b)
+	fmt.Println(a * b)
+	fmt.Println(a / b)
 }
