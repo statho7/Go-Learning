@@ -41,12 +41,28 @@ import (
 // }
 
 
-// bit operations
-func main() {
-	a := 10
-	b := 3
-	fmt.Println(a & b)
-	fmt.Println(a | b)
-	fmt.Println(a ^ b)
-	fmt.Println(a &^ b)
+// // bit operations
+// func main() {
+// 	a := 10
+// 	b := 3
+// 	fmt.Println(a & b)
+// 	fmt.Println(a | b)
+// 	fmt.Println(a ^ b)
+// 	fmt.Println(a &^ b)
+// }
+
+// func main()  {
+// 	a := 7
+// 	fmt.Println(a << 3)
+// 	fmt.Println(a >> 3)
+// }
+
+//floating point numbers
+func main()  {
+	n := 3.14
+	fmt.Printf("%v, %T\n",n,n)
+	n = 13.7e72
+	fmt.Printf("%v, %T\n",n,n)
+	n = 2.1E14
+	fmt.Printf("%v, %T\n",n,n)
 }
