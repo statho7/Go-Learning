@@ -97,3 +97,8 @@ import (
 // 	var n complex128 = complex(5,12)
 // 	fmt.Printf("%v, %T\n",n,n)
 // }
+
+func main() {
+	s:= "this is string"
+	fmt.Printf("%v, %T\n",s[2],s[2])
+}
