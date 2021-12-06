@@ -29,13 +29,24 @@ import (
 // 	fmt.Println(a % b)
 // }
 
+// func main() {
+// 	var a int = 10
+// 	var b int8 = 3
+// 	// fmt.Println(a + b) Error
+// 	fmt.Println(a + int(b))
+// 	// fmt.Println(a - b)
+// 	// fmt.Println(a * b)
+// 	// fmt.Println(a / b)
+// 	// fmt.Println(a % b)
+// }
+
+
+// bit operations
 func main() {
-	var a int = 10
-	var b int8 = 3
-	// fmt.Println(a + b) Error
-	fmt.Println(a + int(b))
-	// fmt.Println(a - b)
-	// fmt.Println(a * b)
-	// fmt.Println(a / b)
-	// fmt.Println(a % b)
+	a := 10
+	b := 3
+	fmt.Println(a & b)
+	fmt.Println(a | b)
+	fmt.Println(a ^ b)
+	fmt.Println(a &^ b)
 }
