@@ -1,3 +1,3 @@
-module src/github.com/statho7/firstapp
+module src/firstapp
 
 go 1.17
