@@ -51,13 +51,24 @@ func main()  {
 	// fmt.Printf("Length: %v\n", len(a))
 	// fmt.Printf("Capacity: %v\n", cap(a))
 
-	a := []int{1, 2, 3}
-	b := a
-	b[1] = 5
+	// a := []int{1, 2, 3}
+	// b := a
+	// b[1] = 5
+	// fmt.Println(a)
+	// fmt.Printf("Length: %v\n", len(a))
+	// fmt.Printf("Capacity: %v\n", cap(a))
+	// fmt.Println(b)
+	// fmt.Printf("Length: %v\n", len(b))
+	// fmt.Printf("Capacity: %v\n", cap(b))
+
+	a := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	b := a[:]
+	c := a[3:]
+	d := a[:6]
+	e := a[3:6]
 	fmt.Println(a)
-	fmt.Printf("Length: %v\n", len(a))
-	fmt.Printf("Capacity: %v\n", cap(a))
 	fmt.Println(b)
-	fmt.Printf("Length: %v\n", len(b))
-	fmt.Printf("Capacity: %v\n", cap(b))
+	fmt.Println(c)
+	fmt.Println(d)
+	fmt.Println(e)
 }
