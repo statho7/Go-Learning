@@ -29,8 +29,21 @@ import (
 // 	fmt.Printf("%v, %T\n", a, a)
 // }
 
+// func main()  {
+// 	const a int = 42
+// 	const b int = 27
+// 	fmt.Printf("%v, %T\n", a + b, a + b)
+// }
+
+// func main()  {
+// 	const a int = 42
+// 	const b int16 = 27
+// 	fmt.Printf("%v, %T\n", a + b, a + b) //Error
+// }
+
+
 func main()  {
-	const a int = 42
-	const b int = 27
+	const a = 42
+	const b int16 = 27
 	fmt.Printf("%v, %T\n", a + b, a + b)
 }
