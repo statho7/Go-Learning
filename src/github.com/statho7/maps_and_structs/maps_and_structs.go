@@ -19,8 +19,14 @@ func main()  {
 	// m := map[[3]int]string{}
 	// fmt.Println(statePopulations, m)
 	// fmt.Println(statePopulations)
-	fmt.Println(statePopulations["Ohio"])
-	statePopulations["Georgia"] = 10310371
-	delete(statePopulations, "Georgia")
-	fmt.Println(statePopulations)
+	// fmt.Println(statePopulations["Ohio"])
+	// statePopulations["Georgia"] = 10310371
+	// delete(statePopulations, "Georgia")
+	// fmt.Println(statePopulations)
+	// fmt.Println(statePopulations["Georgia"])
+
+	pop, ok := statePopulations["Oho"]
+	fmt.Println(pop, ok)
+	pop, ok = statePopulations["Ohio"]
+	fmt.Println(pop, ok)
 }
