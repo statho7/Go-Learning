@@ -54,21 +54,56 @@ import (
 // 	b = iota
 // 	c = iota
 // )
-const (
-	a = iota
-	b
-	c
-)
+// const (
+// 	a = iota
+// 	b
+// 	c
+// )
+
+// const (
+// 	a2 = iota
+// )
+
+// func main()  {
+// 	fmt.Printf("%v, %T\n", a, a)
+// 	fmt.Printf("%v, %T\n", b, b)
+// 	fmt.Printf("%v, %T\n", c, c)
+// 	fmt.Printf("%v, %T\n", a2, a2)
+// }
+
+// enumerated constant examples
+
+// const (
+// 	// errorSpecialist = iota
+// 	// _ = iota
+// 	_ = iota + 5
+// 	catSpecialist
+// 	dogSpecialist
+// 	snakeSpecialist
+// )
+
+// func main()  {
+// 	// var specialistType int = catSpecialist
+// 	// fmt.Printf("%v\n", specialistType == catSpecialist)
+// 	// var specialistType int = dogSpecialist
+// 	// fmt.Printf("%v\n", specialistType == dogSpecialist)
+// 	// var specialistType int
+// 	fmt.Printf("%v\n", dogSpecialist)
+// }
 
 const (
-	a2 = iota
+	_ = iota // ignore first value by assigning to blank identifier
+	KB = 1 << (10 * iota)
+	MB
+	GB
+	TB
+	PB
+	EB
+	ZB
+	YB
 )
 
 func main()  {
-	fmt.Printf("%v, %T\n", a, a)
-	fmt.Printf("%v, %T\n", b, b)
-	fmt.Printf("%v, %T\n", c, c)
-	fmt.Printf("%v, %T\n", a2, a2)
+	fileSize := 4000000000.
+	fmt.Printf("%2fGB", fileSize/GB)
 }
-
-// enumerated constant example app
