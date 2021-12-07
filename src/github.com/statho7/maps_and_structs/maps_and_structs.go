@@ -61,36 +61,56 @@ import(
 // }
 
 // Structs
-type person struct {
-    name string
-    age  int
+type Doctor struct{
+	number int
+	actorName string
+	companions []string
 }
 
-func newPerson(name string) *person {
+func main(){
+	aDoctor := Doctor{
+		number: 3,
+		actorName: "Jon Pertwee",
+		companions: []string {
+			"Liz Shaw",
+			"Jo Grant",
+			"Jane Smith",
+		},
+	}
 
-    p := person{name: name}
-    p.age = 42
-    return &p
+	fmt.Println(aDoctor)
 }
 
-func main() {
+// type person struct {
+//     name string
+//     age  int
+// }
 
-    fmt.Println(person{"Bob", 20})
+// func newPerson(name string) *person {
 
-    fmt.Println(person{name: "Alice", age: 30})
+//     p := person{name: name}
+//     p.age = 42
+//     return &p
+// }
 
-    fmt.Println(person{name: "Fred"})
+// func main() {
 
-    fmt.Println(&person{name: "Ann", age: 40})
+//     fmt.Println(person{"Bob", 20})
 
-    fmt.Println(newPerson("Jon"))
+//     fmt.Println(person{name: "Alice", age: 30})
 
-    s := person{name: "Sean", age: 50}
-    fmt.Println(s.name)
+//     fmt.Println(person{name: "Fred"})
 
-    sp := &s
-    fmt.Println(sp.age)
+//     fmt.Println(&person{name: "Ann", age: 40})
 
-    sp.age = 51
-    fmt.Println(sp.age)
-}
+//     fmt.Println(newPerson("Jon"))
+
+//     s := person{name: "Sean", age: 50}
+//     fmt.Println(s.name)
+
+//     sp := &s
+//     fmt.Println(sp.age)
+
+//     sp.age = 51
+//     fmt.Println(sp.age)
+// }
