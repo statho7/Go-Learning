@@ -61,14 +61,61 @@ func main()  {
 	// fmt.Printf("Length: %v\n", len(b))
 	// fmt.Printf("Capacity: %v\n", cap(b))
 
-	a := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	b := a[:]
-	c := a[3:]
-	d := a[:6]
-	e := a[3:6]
-	fmt.Println(a)
-	fmt.Println(b)
-	fmt.Println(c)
-	fmt.Println(d)
-	fmt.Println(e)
+	// // a := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	// a := [...]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	// b := a[:]
+	// c := a[3:]
+	// d := a[:6]
+	// e := a[3:6]
+	// // a[5] = 42
+	// fmt.Println(a)
+	// fmt.Println(b)
+	// fmt.Println(c)
+	// fmt.Println(d)
+	// fmt.Println(e)
+
+	// // a := make([]int, 3, 100)
+	// a := []int{}
+	// fmt.Println(a)
+	// fmt.Printf("Length: %v\n", len(a))
+	// fmt.Printf("Capacity: %v\n", cap(a))
+	// a = append(a, 1)
+	// fmt.Println(a)
+	// fmt.Printf("Length: %v\n", len(a))
+	// fmt.Printf("Capacity: %v\n", cap(a))
+	// a = append(a, 2, 3, 4, 5)
+	// fmt.Println(a)
+	// fmt.Printf("Length: %v\n", len(a))
+	// fmt.Printf("Capacity: %v\n", cap(a))
+	// // a = append(a, []int{2, 3, 4, 5})
+	// // fmt.Println(a)
+	// // fmt.Printf("Length: %v\n", len(a))
+	// // fmt.Printf("Capacity: %v\n", cap(a))
+	// a = append(a, []int{2, 3, 4, 5}...)
+	// fmt.Println(a)
+	// fmt.Printf("Length: %v\n", len(a))
+	// fmt.Printf("Capacity: %v\n", cap(a))
+
+	// a := []int{1, 2, 3, 4, 5}
+	// // b := a[1:]
+	// // b := a[:len(a)-1]
+	// fmt.Println(a)
+	// b := append(a[:2], a[3:]...)
+	// fmt.Println(b)
+	// fmt.Println(a)a[4] = 100
+	
+	var a [5]int
+    fmt.Println("emp:", a)
+    fmt.Println("set:", a)
+    fmt.Println("get:", a[4])
+	fmt.Println("len:", len(a))
+	b := [5]int{1, 2, 3, 4, 5}
+    fmt.Println("dcl:", b)
+	var twoD [2][3]int
+    for i := 0; i < 2; i++ {
+        for j := 0; j < 3; j++ {
+            twoD[i][j] = i + j
+        }
+    }
+    fmt.Println("2d: ", twoD)
 }
