@@ -104,11 +104,15 @@ import(
 //     age  int
 // }
 
-func main()  {
-	//anonymous struct
-	aDoctor := struct{name string}{name: "Jon Pertwee"}
-	fmt.Println(aDoctor)
-}
+// func main()  {
+// 	//anonymous struct
+// 	aDoctor := struct{name string}{name: "Jon Pertwee"}
+// 	// anotherDoctor := aDoctor
+// 	anotherDoctor := &aDoctor
+// 	anotherDoctor.name = "Tom Baker"
+// 	fmt.Println(aDoctor)
+// 	fmt.Println(anotherDoctor)
+// }
 
 // func newPerson(name string) *person {
 
@@ -138,3 +142,17 @@ func main()  {
 //     sp.age = 51
 //     fmt.Println(sp.age)
 // }
+
+type Animal struct {
+	Name string
+	Origin string
+}
+
+type Bird struct {
+	SpeedKPH float32
+	CanFly bool
+}
+
+func main()  {
+	fmt.Println("")
+}
