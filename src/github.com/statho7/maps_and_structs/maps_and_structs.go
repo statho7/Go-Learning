@@ -61,43 +61,54 @@ import(
 // }
 
 // Structs
-type Doctor struct{
-	number int
-	actorName string
-	companions []string
-}
+// // type Doctor struct{
+// // 	Number int
+// // 	ActorName string
+// // 	Companions []string
+// // }
+// type Doctor struct{
+// 	number int
+// 	actorName string
+// 	companions []string
+// }
 
-func main(){
-	// aDoctor := Doctor{
-	// 	number: 3,
-	// 	actorName: "Jon Pertwee",
-	// 	companions: []string {
-	// 		"Liz Shaw",
-	// 		"Jo Grant",
-	// 		"Sarah Jane Smith",
-	// 	},
-	// }
-	// // aDoctor := Doctor{
-	// // 	3,
-	// // 	"Jon Pertwee",
-	// // 	[]string {
-	// // 		"Liz Shaw",
-	// // 		"Jo Grant",
-	// // 		"Sarah Jane Smith",
-	// // 	},
-	// // }
+// func main(){
+// 	// aDoctor := Doctor{
+// 	// 	number: 3,
+// 	// 	actorName: "Jon Pertwee",
+// 	// 	companions: []string {
+// 	// 		"Liz Shaw",
+// 	// 		"Jo Grant",
+// 	// 		"Sarah Jane Smith",
+// 	// 	},
+// 	// }
+// 	// // aDoctor := Doctor{
+// 	// // 	3,
+// 	// // 	"Jon Pertwee",
+// 	// // 	[]string {
+// 	// // 		"Liz Shaw",
+// 	// // 		"Jo Grant",
+// 	// // 		"Sarah Jane Smith",
+// 	// // 	},
+// 	// // }
 
-	// fmt.Println(aDoctor)
-	// fmt.Println(aDoctor.actorName)
-	// fmt.Println(aDoctor.companions)
-	// fmt.Println(aDoctor.companions[1])
-	
-}
+// 	// fmt.Println(aDoctor)
+// 	// fmt.Println(aDoctor.actorName)
+// 	// fmt.Println(aDoctor.companions)
+// 	// fmt.Println(aDoctor.companions[1])
+
+// }
 
 // type person struct {
 //     name string
 //     age  int
 // }
+
+func main()  {
+	//anonymous struct
+	aDoctor := struct{name string}{name: "Jon Pertwee"}
+	fmt.Println(aDoctor)
+}
 
 // func newPerson(name string) *person {
 
