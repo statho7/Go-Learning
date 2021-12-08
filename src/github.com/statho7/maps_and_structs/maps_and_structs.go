@@ -143,16 +143,35 @@ import(
 //     fmt.Println(sp.age)
 // }
 
+
+// Composition
 type Animal struct {
 	Name string
 	Origin string
 }
 
 type Bird struct {
+	Animal
 	SpeedKPH float32
 	CanFly bool
 }
 
 func main()  {
-	fmt.Println("")
+	// b := Bird{}
+	// b.Name = "Emu"
+	// b.Origin = "Australia"
+	// b.SpeedKPH = 48
+	// b.CanFly = false
+
+	b := Bird{
+		Animal: Animal{Name: "Emu", Origin: "Australia"},
+		SpeedKPH: 48,
+		CanFly: false,
+	}
+	
+	fmt.Println(b)
+	fmt.Println(b.Name)
+	fmt.Println(b.Origin)
+	fmt.Println(b.Origin)
+	fmt.Println(b.CanFly)
 }
