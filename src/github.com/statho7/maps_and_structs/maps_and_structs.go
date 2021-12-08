@@ -1,8 +1,8 @@
 package main
 
-import(
-	"fmt"
-)
+// import(
+// 	"fmt"
+// )
 
 // func main()  {
 // 	// statePopulations := make(map[string]int)
@@ -145,33 +145,51 @@ import(
 
 
 // Composition
+// type Animal struct {
+// 	Name string
+// 	Origin string
+// }
+
+// type Bird struct {
+// 	Animal
+// 	SpeedKPH float32
+// 	CanFly bool
+// }
+
+// func main()  {
+// 	// b := Bird{}
+// 	// b.Name = "Emu"
+// 	// b.Origin = "Australia"
+// 	// b.SpeedKPH = 48
+// 	// b.CanFly = false
+
+// 	b := Bird{
+// 		Animal: Animal{Name: "Emu", Origin: "Australia"},
+// 		SpeedKPH: 48,
+// 		CanFly: false,
+// 	}
+
+// 	fmt.Println(b)
+// 	fmt.Println(b.Name)
+// 	fmt.Println(b.Origin)
+// 	fmt.Println(b.Origin)
+// 	fmt.Println(b.CanFly)
+// }
+
+
+import(
+	"fmt"
+	"reflect"
+)
+
 type Animal struct {
-	Name string
+	Name string `required max:"100"`
 	Origin string
 }
 
-type Bird struct {
-	Animal
-	SpeedKPH float32
-	CanFly bool
-}
-
 func main()  {
-	// b := Bird{}
-	// b.Name = "Emu"
-	// b.Origin = "Australia"
-	// b.SpeedKPH = 48
-	// b.CanFly = false
 
-	b := Bird{
-		Animal: Animal{Name: "Emu", Origin: "Australia"},
-		SpeedKPH: 48,
-		CanFly: false,
-	}
-	
-	fmt.Println(b)
-	fmt.Println(b.Name)
-	fmt.Println(b.Origin)
-	fmt.Println(b.Origin)
-	fmt.Println(b.CanFly)
+	t := reflect.TypeOf(Animal{})
+	field, _ := t.FieldByName(("Name"))
+	fmt.Println(field.Tag)
 }
