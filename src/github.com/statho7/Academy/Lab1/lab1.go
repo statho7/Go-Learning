@@ -35,7 +35,6 @@ func slicemania(mySlice []string) (int, string) {
 			total = total * myInt
 		}
 		// fmt.Println(myInt,b)
-		// i = i + 1
 	}
 
 	return total, myString
