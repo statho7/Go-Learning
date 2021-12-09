@@ -65,6 +65,7 @@ func main()  {
 	switch returnTrue() {
 	case true:
 		fmt.Println("Yolo")
+		// fallthrough ---> bad, too bad be careful 
 	case false:
 		fmt.Println("Swag")		
 	default:
