@@ -115,4 +115,5 @@ func panicker() {
 			log.Println("Error:", err)
 		}
 	}()
+	panic("Something bad happened")
 }
