@@ -44,20 +44,34 @@ package main
 // 	fmt.Printf("%s", robots)
 // }
 
+// import (
+// 	"fmt"
+// )
+
+// func main() {
+// 	// a := "start"
+// 	// defer fmt.Println(a)
+// 	// a = "end"
+	
+// 	// a, b := 1, 0
+// 	// ans := a / b
+// 	// fmt.Println(ans)
+	
+// 	fmt.Println("start")
+// 	panic("Something bad happened")
+// 	fmt.Println("end")
+// }
+
 import (
-	"fmt"
+	"net/http"
 )
 
 func main() {
-	// a := "start"
-	// defer fmt.Println(a)
-	// a = "end"
-	
-	// a, b := 1, 0
-	// ans := a / b
-	// fmt.Println(ans)
-	
-	fmt.Println("start")
-	panic("Something bad happened")
-	fmt.Println("end")
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("Hello Go!"))
+	})
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		panic(err.Error())
+	}
 }
