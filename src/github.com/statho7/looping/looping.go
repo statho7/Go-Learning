@@ -44,11 +44,18 @@ func main()  {
 	// }
 
 	
-	i := 0
-	for i < count {
-		if i % 9 == 0 {
+	// i := 0
+	// for i < count {
+	// 	if i % 9 == 0 {
+	// 		fmt.Println(i)
+	// 		break
+	// 	}
+	// }
+
+	for i := 0; i < count; i++ {
+		if i % 2 == 0 {
 			fmt.Println(i)
-			break
+			continue
 		}
 	}
 }
