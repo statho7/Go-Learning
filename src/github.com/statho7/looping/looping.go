@@ -14,8 +14,22 @@ func main()  {
 	// 	fmt.Println(i, j)
 	// }
 
+	// for i := 0; i < count; i++ {
+	// 	if i % 2 == 0 {
+	// 		fmt.Println(i)
+	// 	}
+	// }
 
-	for i := 0; i < count; i++ {
+	// i := 0
+	// for ; i < count; i++ {
+	// 	if i % 2 == 0 {
+	// 		fmt.Println(i)
+	// 	}
+	// }
+
+	i := 0
+	for ; i < count;  {
+		i++
 		if i % 2 == 0 {
 			fmt.Println(i)
 		}
