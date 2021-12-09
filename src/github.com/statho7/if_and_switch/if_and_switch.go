@@ -81,6 +81,8 @@ func main()  {
 		fmt.Println("i is float64")	
 	case string:
 		fmt.Println("i is string")		
+		break
+		fmt.Println("This won't print")
 	default:
 		fmt.Println("i is an helicopter")
 	}
