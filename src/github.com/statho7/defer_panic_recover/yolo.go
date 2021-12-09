@@ -62,16 +62,27 @@ package main
 // 	fmt.Println("end")
 // }
 
+// import (
+// 	"net/http"
+// )
+
+// func main() {
+// 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+// 		w.Write([]byte("Hello Go!"))
+// 	})
+// 	err := http.ListenAndServe(":8080", nil)
+// 	if err != nil {
+// 		panic(err.Error())
+// 	}
+// }
+
 import (
-	"net/http"
+	"fmt"
 )
 
-func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Hello Go!"))
-	})
-	err := http.ListenAndServe(":8080", nil)
-	if err != nil {
-		panic(err.Error())
-	}
+func main() {	
+	fmt.Println("start")
+	defer fmt.Println("this was deferred")
+	panic("Something bad happened")
+	fmt.Println("end")
 }
