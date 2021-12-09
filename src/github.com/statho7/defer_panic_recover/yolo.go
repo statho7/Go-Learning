@@ -5,5 +5,11 @@ import (
 )
 
 func main() {
-	fmt.Println("I am panicking")
+	fmt.Println("start")
+	fmt.Println("middle")
+	fmt.Println("end")
+
+	fmt.Println("start")
+	defer fmt.Println("middle")
+	fmt.Println("end")
 }
