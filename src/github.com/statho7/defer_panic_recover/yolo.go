@@ -49,7 +49,15 @@ import (
 )
 
 func main() {
-	a := "start"
-	defer fmt.Println(a)
-	a = "end"
+	// a := "start"
+	// defer fmt.Println(a)
+	// a = "end"
+	
+	// a, b := 1, 0
+	// ans := a / b
+	// fmt.Println(ans)
+	
+	fmt.Println("start")
+	panic("Something bad happened")
+	fmt.Println("end")
 }
