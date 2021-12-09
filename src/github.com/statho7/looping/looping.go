@@ -5,7 +5,7 @@ import (
 )
 
 func main()  {
-	count := 10
+	// count := 10
 	// for i := 0; i < count; i++ {
 	// 	fmt.Println(i)
 	// }
@@ -58,15 +58,21 @@ func main()  {
 	// 		continue
 	// 	}
 	// }
-	Loop:
-	for i := 0; i < count; i++ {
-		for j := 0; j < count; j++ {
-			if i % 2 == 0 {
-				fmt.Println(i * j)
-			}
-			if (i * j) > 30{
-				break Loop
-			}	
-		}
-	}
+
+	// Loop:
+	// for i := 0; i < count; i++ {
+	// 	for j := 0; j < count; j++ {
+	// 		if i % 2 == 0 {
+	// 			fmt.Println(i * j)
+	// 		}
+	// 		if (i * j) > 30{
+	// 			break Loop
+	// 		}	
+	// 	}
+	// }
+
+	// s := []int{1, 2, 3}
+	// for k, v := range s {
+	// 	fmt.Println(k, v)
+	// }
 }
