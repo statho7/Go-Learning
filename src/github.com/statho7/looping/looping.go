@@ -52,10 +52,18 @@ func main()  {
 	// 	}
 	// }
 
+	// for i := 0; i < count; i++ {
+	// 	if i % 2 == 0 {
+	// 		fmt.Println(i)
+	// 		continue
+	// 	}
+	// }
+
 	for i := 0; i < count; i++ {
-		if i % 2 == 0 {
-			fmt.Println(i)
-			continue
+		for j := 0; j < count; j++ {
+			if i % 2 == 0 {
+				fmt.Println(i * j)
+			}			
 		}
 	}
 }
