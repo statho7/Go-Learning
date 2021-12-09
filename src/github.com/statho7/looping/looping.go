@@ -58,12 +58,15 @@ func main()  {
 	// 		continue
 	// 	}
 	// }
-
+	Loop:
 	for i := 0; i < count; i++ {
 		for j := 0; j < count; j++ {
 			if i % 2 == 0 {
 				fmt.Println(i * j)
-			}			
+			}
+			if (i * j) > 30{
+				break Loop
+			}	
 		}
 	}
 }
