@@ -6,7 +6,13 @@ import (
 
 func main()  {
 	count := 10
-	for i := 0; i < count; i++ {
-		fmt.Println(i)
+	// for i := 0; i < count; i++ {
+	// 	fmt.Println(i)
+	// }
+	
+	for i, j := 0, 0; i < count; i, j = i + 1, j + 2 {
+		fmt.Println(i, j)
 	}
+
+
 }
