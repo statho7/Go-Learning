@@ -76,17 +76,25 @@ func main()  {
 	// 	fmt.Println(k, v)
 	// }
 
-	statePopulations := map[string]int{
-		"California":		39250017,
-		"Texas":			27862596,
-		"Florida":			20612439,
-		"New York":			19745286,
-		"Pennsylvania":		12802503,
-		"Illinois":			12801539,
-		"Ohio":				11614373,
-	}
+	// statePopulations := map[string]int{
+	// 	"California":		39250017,
+	// 	"Texas":			27862596,
+	// 	"Florida":			20612439,
+	// 	"New York":			19745286,
+	// 	"Pennsylvania":		12802503,
+	// 	"Illinois":			12801539,
+	// 	"Ohio":				11614373,
+	// }
 
-	for k, v := range statePopulations {
+	// for k, v := range statePopulations {
+	// 	fmt.Println(k, v)
+	// }
+
+	s := "Hello Go"
+	for k, v := range s {
 		fmt.Println(k, v)
+	}
+	for k, v := range s {
+		fmt.Println(k, string(v))
 	}
 }
