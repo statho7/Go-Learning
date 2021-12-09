@@ -67,5 +67,7 @@ func main()  {
 		fmt.Println("Yolo")
 	case false:
 		fmt.Println("Swag")		
+	default:
+		fmt.Println("Thug")
 	}
 }
