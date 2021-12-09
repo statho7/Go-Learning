@@ -113,6 +113,7 @@ func panicker() {
 	defer func() {
 		if err:= recover(); err != nil {
 			log.Println("Error:", err)
+			// panic(err)
 		}
 	}()
 	panic("Something bad happened")
