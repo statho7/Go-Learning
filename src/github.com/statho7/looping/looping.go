@@ -10,9 +10,14 @@ func main()  {
 	// 	fmt.Println(i)
 	// }
 	
-	for i, j := 0, 0; i < count; i, j = i + 1, j + 2 {
-		fmt.Println(i, j)
+	// for i, j := 0, 0; i < count; i, j = i + 1, j + 2 {
+	// 	fmt.Println(i, j)
+	// }
+
+
+	for i := 0; i < count; i++ {
+		if i % 2 == 0 {
+			fmt.Println(i)
+		}
 	}
-
-
 }
