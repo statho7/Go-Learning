@@ -76,13 +76,43 @@ package main
 // 	}
 // }
 
+// import (
+// 	"fmt"
+// 	"log"
+// )
+
+// func main() {	
+// 	// fmt.Println("start")
+// 	// defer fmt.Println("this was deferred")
+// 	// panic("Something bad happened")
+// 	// fmt.Println("end")
+	
+// 	fmt.Println("start")
+// 	defer func() {
+// 		if err:= recover(); err != nil {
+// 			log.Println("Error:", err)
+// 		}
+// 	}()
+// 	panic("Something bad happened")
+// 	fmt.Println("end")
+// }
+
 import (
 	"fmt"
+	"log"
 )
 
 func main() {	
 	fmt.Println("start")
-	defer fmt.Println("this was deferred")
-	panic("Something bad happened")
+	panicker()
 	fmt.Println("end")
+}
+
+func panicker() {
+	fmt.Println("about to panic!")
+	defer func() {
+		if err:= recover(); err != nil {
+			log.Println("Error:", err)
+		}
+	}()
 }
