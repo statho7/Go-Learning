@@ -71,4 +71,17 @@ func main()  {
 	default:
 		fmt.Println("Thug")
 	}
+	
+	var i interface{}="1."
+	switch i.(type) {
+	case int:
+		fmt.Println("i is int")
+		// fallthrough ---> bad, too bad be careful 
+	case float64:
+		fmt.Println("i is float64")	
+	case string:
+		fmt.Println("i is string")		
+	default:
+		fmt.Println("i is an helicopter")
+	}
 }
