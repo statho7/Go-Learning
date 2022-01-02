@@ -35,15 +35,88 @@ import (
 // 	fmt.Println(name)
 // }
 
+// func main()  {
+// 	greeting := "Hello"
+// 	name := "Stacey"
+// 	sayGreeting(&greeting, &name)
+// 	fmt.Println(name)
+// }
+
+// func sayGreeting(greeting, name *string)  {
+// 	fmt.Println(*greeting, *name)
+// 	*name = "Ted"
+// 	fmt.Println(*name)
+// }
+
+// func main()  {
+// 	sum("The sum is ", 1,2,3,4,5)
+// }
+
+// func sum(msg string, values ...int)  {
+// 	fmt.Println(values)
+// 	result := 0
+// 	for _,v := range values {
+// 		result += v
+// 	}
+// 	fmt.Println(msg, result)
+// }
+
+// func main()  {
+// 	s := sum(1,2,3,4,5)
+// 	fmt.Println("The sum is ", s)
+// }
+
+// func sum(values ...int) int {
+// 	fmt.Println(values)
+// 	result := 0
+// 	for _,v := range values {
+// 		result += v
+// 	}
+
+// 	return result
+// }
+
+// func main()  {
+// 	s := sum(1,2,3,4,5)
+// 	fmt.Println("The sum is ", *s)
+// }
+
+// func sum(values ...int) *int {
+// 	fmt.Println(values)
+// 	result := 0
+// 	for _,v := range values {
+// 		result += v
+// 	}
+
+// 	return &result
+// }
+
+// func main()  {
+// 	s := sum(1,2,3,4,5)
+// 	fmt.Println("The sum is ", s)
+// }
+
+// func sum(values ...int) (result int) {
+// 	fmt.Println(values)
+// 	for _,v := range values {
+// 		result += v
+// 	}
+
+// 	return
+// }
+
 func main()  {
-	greeting := "Hello"
-	name := "Stacey"
-	sayGreeting(&greeting, &name)
-	fmt.Println(name)
+	d,e := divide( 5.0, 0.0)
+	if e != nil {
+		fmt.Println(e)
+		return
+	}
+	fmt.Println(d)
 }
 
-func sayGreeting(greeting, name *string)  {
-	fmt.Println(*greeting, *name)
-	*name = "Ted"
-	fmt.Println(*name)
+func divide(a, b float64) (float64, error) {
+	if b == 0.0 {
+		return 0.0, fmt.Errorf("Can not divide by zero.")
+	}
+	return a / b, nil
 }
