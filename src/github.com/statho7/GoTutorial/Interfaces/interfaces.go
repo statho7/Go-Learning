@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"io"
 )
 
 // func main() {
@@ -41,9 +42,39 @@ import (
 // }
 
 func main() {
-	var wc WriterCloser = NewBufferedWriterCloser()
-	wc.Write([]byte("Hello Youtube listeners, this is a test"))
-	wc.Close()
+	// // var wc WriterCloser = NewBufferedWriterCloser()
+	// // wc.Write([]byte("Hello Youtube listeners, this is a test"))
+	// // wc.Close()
+	// var wc WriterCloser = NewBufferedWriterCloser()
+	// wc.Write([]byte("Hello Youtube listeners, this is a test"))
+	// wc.Close()
+
+	// // bwc := wc.(*BufferedWriterCloser)
+	// // bwc := wc.(io.Reader)
+	// // fmt.Println(bwc)
+
+	// // r, ok := wc.(io.Reader)
+	// // r, ok := wc.(*BufferedWriterCloser)
+	// r, ok := wc.(BufferedWriterCloser)
+	// if ok {
+	// 	fmt.Println(r)
+	// } else {
+	// 	fmt.Println("Conversion failed")
+	// }
+
+	var myObj interface{} = NewBufferedWriterCloser()
+	if wc, ok := myObj.(WriterCloser); ok {
+		wc.Write([]byte("Hello Youtube listeners, this is a test"))
+		wc.Close()
+	}
+	r, ok := myObj.(io.Reader)
+	// r, ok := wc.(*BufferedWriterCloser)
+	// r, ok := wc.(BufferedWriterCloser)
+	if ok {
+		fmt.Println(r)
+	} else {
+		fmt.Println("Conversion failed")
+	}
 }
 
 type Writer interface {
