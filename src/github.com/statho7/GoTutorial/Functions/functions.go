@@ -105,18 +105,78 @@ import (
 // 	return
 // }
 
+// func main()  {
+// 	d,err := divide( 5.0, 0.0)
+// 	if err != nil {
+// 		fmt.Println(err)
+// 		return
+// 	}
+// 	fmt.Println(d)
+// }
+
+// func divide(a, b float64) (float64, error) {
+// 	if b == 0.0 {
+// 		return 0.0, fmt.Errorf("Can not divide by zero.")
+// 	}
+// 	return a / b, nil
+// }
+
 func main()  {
-	d,e := divide( 5.0, 0.0)
-	if e != nil {
-		fmt.Println(e)
-		return
+	// func ()  {
+	// 	msg := "Hello Go!"
+	// 	fmt.Println(msg)
+	// }()
+
+	// for i := 0; i < 5; i++ {
+	// 	func (i int)  {
+	// 		fmt.Println(i)
+	// 	}(i)
+	// }
+	
+	// var f func() = func() {
+	// 	msg := "Hello Go!"
+	// 	fmt.Println(msg)
+	// }
+
+	// f := func ()  {
+	// 	msg := "Hello Go!"
+	// 	fmt.Println(msg)
+	// }
+	// f()
+
+	// var divide func( float64, float64) (float64, error)
+	// divide = func(a, b float64) (float64, error) {
+	// 	if b == 0.0 {
+	// 		return 0.0, fmt.Errorf("Can not divide by zero.")
+	// 	}
+	// 	return a / b, nil
+	// }
+	// d,err := divide( 5.0, 0.0)
+	// if err != nil {
+	// 	fmt.Println(err)
+	// 	return
+	// }
+	// fmt.Println(d)
+
+	g := greeter{
+		greeting: "Hello",
+		name: "Go",
 	}
-	fmt.Println(d)
+	g.greet()
+	fmt.Println("The new name is: ", g.name)
 }
 
-func divide(a, b float64) (float64, error) {
-	if b == 0.0 {
-		return 0.0, fmt.Errorf("Can not divide by zero.")
-	}
-	return a / b, nil
+type greeter struct {
+	greeting string
+	name string
 }
+
+func (g greeter) greet() {
+	fmt.Println(g.greeting, g.name)
+	g.name = ""
+}
+
+// func (g *greeter) greet() {
+// 	fmt.Println(g.greeting, g.name)
+// 	g.name = ""
+// }
