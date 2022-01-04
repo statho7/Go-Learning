@@ -1,10 +1,10 @@
 package main
 
-import (
-	"fmt"
-	// "sync"
-	"time"
-)
+// import (
+// 	"fmt"
+// 	"sync"
+// 	"time"
+// )
 
 // var wg = sync.WaitGroup{}
 
@@ -86,6 +86,11 @@ import (
 // 	wg.Wait()
 // }
 
+import (
+	"fmt"
+	"time"
+)
+
 const (
 	logInfo = "INFO"
 	logWarning = "WARNING"
@@ -102,6 +107,9 @@ var logCh = make(chan logEntry, 50)
 
 func main() {
 	go logger()
+	defer func(){
+		close(logCh)
+	}()
 	logCh <- logEntry{time.Now(), logInfo, "App is starting"}
 	
 	logCh <- logEntry{time.Now(), logInfo, "App is starting"}
