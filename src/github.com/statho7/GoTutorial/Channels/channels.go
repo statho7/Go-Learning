@@ -1,11 +1,12 @@
 package main
 
-import(
+import (
 	"fmt"
-	"sync"
+	// "sync"
+	"time"
 )
 
-var wg = sync.WaitGroup{}
+// var wg = sync.WaitGroup{}
 
 // func main() {
 // 	ch := make(chan int)
@@ -85,24 +86,31 @@ var wg = sync.WaitGroup{}
 // 	wg.Wait()
 // }
 
+const (
+	logInfo = "INFO"
+	logWarning = "WARNING"
+	logError = "ERROR"
+)
+
+type logEntry struct {
+	time time.Time
+	severity string
+	message string
+}
+
+var logCh = make(chan logEntry, 50)
+
 func main() {
-	ch := make(chan int, 50)
-	wg.Add(2)
-	go func(ch <- chan int){
-		for {
-			if i, ok := <- ch; ok {
-				fmt.Println(i)
-			} else {
-				break
-			}
-		}
-		wg.Done()
-	}(ch)
-	go func(ch chan<- int){
-		ch <- 42
-		ch <- 27
-		close(ch)
-		wg.Done()
-	}(ch)
-	wg.Wait()
+	go logger()
+	logCh <- logEntry{time.Now(), logInfo, "App is starting"}
+	
+	logCh <- logEntry{time.Now(), logInfo, "App is starting"}
+	time.Sleep(100 * time.Millisecond)
+}
+
+
+func logger() {
+	for entry := range logCh {
+		fmt.Printf("%v - [%v]%v\n", entry.time.Format("2006-01-02T15:04:05"), entry.severity, entry.message)
+	}
 }
