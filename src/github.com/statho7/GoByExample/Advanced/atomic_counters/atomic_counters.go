@@ -12,13 +12,13 @@ func main() {
 
     var wg sync.WaitGroup
 
-    for i := 0; i < 50; i++ {
+    for i := 0; i < 100; i++ {
         wg.Add(1)
 
         go func() {
             for c := 0; c < 1000; c++ {
 
-                atomic.AddUint64(&ops, 1)
+                atomic.AddUint64(&ops, 2)
             }
             wg.Done()
         }()
