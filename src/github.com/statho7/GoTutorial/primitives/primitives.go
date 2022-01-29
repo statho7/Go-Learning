@@ -1,7 +1,7 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 // func main() {
@@ -39,7 +39,6 @@ import (
 // 	// fmt.Println(a / b)
 // 	// fmt.Println(a % b)
 // }
-
 
 // // bit operations
 // func main() {
@@ -87,13 +86,12 @@ import (
 // 	// fmt.Println(a - b)
 // 	// fmt.Println(a * b)
 // 	// fmt.Println(a / b)
-		
+
 // 	// var n complex64 = 1 + 2i
 // 	// var n complex128 = 1 + 2i
 // 	// fmt.Printf("%v, %T\n",real(n),real(n))
 // 	// fmt.Printf("%v, %T\n",imag(n),imag(n))
 
-	
 // 	var n complex128 = complex(5,12)
 // 	fmt.Printf("%v, %T\n",n,n)
 // }
@@ -118,5 +116,5 @@ import (
 func main() {
 	// r:= 'a'
 	var r rune = 'a'
-	fmt.Printf("%v, %T\n",r,r)
+	fmt.Printf("%v, %T\n", r, r)
 }

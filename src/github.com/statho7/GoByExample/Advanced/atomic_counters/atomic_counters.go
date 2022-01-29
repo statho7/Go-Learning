@@ -1,30 +1,30 @@
 package main
 
 import (
-    "fmt"
-    "sync"
-    "sync/atomic"
+	"fmt"
+	"sync"
+	"sync/atomic"
 )
 
 func main() {
 
-    var ops uint64
+	var ops uint64
 
-    var wg sync.WaitGroup
+	var wg sync.WaitGroup
 
-    for i := 0; i < 100; i++ {
-        wg.Add(1)
+	for i := 0; i < 100; i++ {
+		wg.Add(1)
 
-        go func() {
-            for c := 0; c < 1000; c++ {
+		go func() {
+			for c := 0; c < 1000; c++ {
 
-                atomic.AddUint64(&ops, 2)
-            }
-            wg.Done()
-        }()
-    }
+				atomic.AddUint64(&ops, 2)
+			}
+			wg.Done()
+		}()
+	}
 
-    wg.Wait()
+	wg.Wait()
 
-    fmt.Println("ops:", ops)
+	fmt.Println("ops:", ops)
 }

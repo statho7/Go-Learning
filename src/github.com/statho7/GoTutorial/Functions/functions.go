@@ -121,7 +121,7 @@ import (
 // 	return a / b, nil
 // }
 
-func main()  {
+func main() {
 	// func ()  {
 	// 	msg := "Hello Go!"
 	// 	fmt.Println(msg)
@@ -132,7 +132,7 @@ func main()  {
 	// 		fmt.Println(i)
 	// 	}(i)
 	// }
-	
+
 	// var f func() = func() {
 	// 	msg := "Hello Go!"
 	// 	fmt.Println(msg)
@@ -160,7 +160,7 @@ func main()  {
 
 	g := greeter{
 		greeting: "Hello",
-		name: "Go",
+		name:     "Go",
 	}
 	g.greet()
 	fmt.Println("The new name is: ", g.name)
@@ -168,7 +168,7 @@ func main()  {
 
 type greeter struct {
 	greeting string
-	name string
+	name     string
 }
 
 func (g greeter) greet() {

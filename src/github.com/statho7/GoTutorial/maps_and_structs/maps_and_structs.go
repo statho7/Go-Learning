@@ -143,7 +143,6 @@ package main
 //     fmt.Println(sp.age)
 // }
 
-
 // Composition
 // type Animal struct {
 // 	Name string
@@ -176,18 +175,17 @@ package main
 // 	fmt.Println(b.CanFly)
 // }
 
-
-import(
+import (
 	"fmt"
 	"reflect"
 )
 
 type Animal struct {
-	Name string `required max:"100"`
+	Name   string `required max:"100"`
 	Origin string
 }
 
-func main()  {
+func main() {
 
 	t := reflect.TypeOf(Animal{})
 	field, _ := t.FieldByName(("Name"))

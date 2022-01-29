@@ -16,10 +16,10 @@ func (r *Circle) area() float64 {
 
 func (r Circle) circumference() float64 {
 	pi := math.Pi
-	return float64(2)*pi * float64(r.radius)
+	return float64(2) * pi * float64(r.radius)
 }
 
-func main()  {
+func main() {
 	r := Circle{diameter: 10, radius: 5}
 
 	fmt.Println("area: ", r.area())

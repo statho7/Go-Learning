@@ -5,7 +5,6 @@ import (
 	"strconv"
 )
 
-
 func product(array [5]int) int {
 
 	product := array[0]
@@ -20,9 +19,8 @@ func product(array [5]int) int {
 	return product
 }
 
-
 func slicemania(mySlice []string) (int, string) {
-	
+
 	length := (len(mySlice) - 1)
 	var total int
 	total = 1
@@ -40,7 +38,7 @@ func slicemania(mySlice []string) (int, string) {
 	return total, myString
 }
 
-func main() {	
+func main() {
 	myArray := [5]int{1, 2, 3, 4, 5}
 	mySlice := []string{"1", "4", "293", "4", "9", "hello", "sunshine"}
 

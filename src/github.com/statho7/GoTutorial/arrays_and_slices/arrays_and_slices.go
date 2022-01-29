@@ -4,18 +4,18 @@ import (
 	"fmt"
 )
 
-func main()  {
+func main() {
 	// grade1 := 97
 	// grade2 := 85
 	// grade3 := 93
 	// fmt.Printf("Grades: %v, %v, %v", grade1, grade2, grade3)
-	
+
 	// grades := [3]int{97,85,93}
 	// fmt.Printf("Grades: %v", grades)
-	
+
 	// grades := [...]int{97,85,93}
 	// fmt.Printf("Grades: %v", grades)
-	
+
 	// var students [3]string
 	// fmt.Printf("Students: %v\n", students)
 	// students[0] = "Lisa"
@@ -24,7 +24,7 @@ func main()  {
 	// fmt.Printf("Students: %v\n", students)
 	// fmt.Printf("Students #1: %v\n", students[1])
 	// fmt.Printf("Number of students: %v", len(students))
-	
+
 	// var identityMatrix [3][3]int = [3][3]int { [3]int{1,0,0}, [3]int{0,1,0}, [3]int{0,0,1}}
 	// fmt.Println(identityMatrix)
 
@@ -103,19 +103,19 @@ func main()  {
 	// b := append(a[:2], a[3:]...)
 	// fmt.Println(b)
 	// fmt.Println(a)a[4] = 100
-	
+
 	var a [5]int
-    fmt.Println("emp:", a)
-    fmt.Println("set:", a)
-    fmt.Println("get:", a[4])
+	fmt.Println("emp:", a)
+	fmt.Println("set:", a)
+	fmt.Println("get:", a[4])
 	fmt.Println("len:", len(a))
 	b := [5]int{1, 2, 3, 4, 5}
-    fmt.Println("dcl:", b)
+	fmt.Println("dcl:", b)
 	var twoD [2][3]int
-    for i := 0; i < 2; i++ {
-        for j := 0; j < 3; j++ {
-            twoD[i][j] = i + j
-        }
-    }
-    fmt.Println("2d: ", twoD)
+	for i := 0; i < 2; i++ {
+		for j := 0; j < 3; j++ {
+			twoD[i][j] = i + j
+		}
+	}
+	fmt.Println("2d: ", twoD)
 }

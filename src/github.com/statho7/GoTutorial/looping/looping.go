@@ -4,12 +4,12 @@ import (
 	"fmt"
 )
 
-func main()  {
+func main() {
 	// count := 10
 	// for i := 0; i < count; i++ {
 	// 	fmt.Println(i)
 	// }
-	
+
 	// for i, j := 0, 0; i < count; i, j = i + 1, j + 2 {
 	// 	fmt.Println(i, j)
 	// }
@@ -43,7 +43,6 @@ func main()  {
 	// 	}
 	// }
 
-	
 	// i := 0
 	// for i < count {
 	// 	if i % 9 == 0 {
@@ -67,7 +66,7 @@ func main()  {
 	// 		}
 	// 		if (i * j) > 30{
 	// 			break Loop
-	// 		}	
+	// 		}
 	// 	}
 	// }
 

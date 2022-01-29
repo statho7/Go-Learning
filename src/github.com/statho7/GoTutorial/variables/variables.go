@@ -25,7 +25,7 @@ package main
 // )
 
 // func main() {
-    
+
 // }
 
 // var j int = 27
@@ -41,22 +41,21 @@ package main
 // func main() {
 //     var i int = 42
 //     fmt.Printf("%v, %T\n", i, i)
-    
+
 //     var j float32
 //     j = float32(i)
 //     fmt.Printf("%v, %T\n", j, j)
 // }
 
-
 import (
-    "fmt"
-    "strconv"
+	"fmt"
+	"strconv"
 )
 
 func main() {
-    var i int = 42
-    fmt.Printf("%v, %T\n", i, i)
-    
-    var j string = strconv.Itoa(i)
-    fmt.Printf("%v, %T\n", j, j)
+	var i int = 42
+	fmt.Printf("%v, %T\n", i, i)
+
+	var j string = strconv.Itoa(i)
+	fmt.Printf("%v, %T\n", j, j)
 }

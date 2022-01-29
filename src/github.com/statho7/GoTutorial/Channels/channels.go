@@ -111,11 +111,10 @@ package main
 // 		close(logCh)
 // 	}()
 // 	logCh <- logEntry{time.Now(), logInfo, "App is starting"}
-	
+
 // 	logCh <- logEntry{time.Now(), logInfo, "App is shutting down"}
 // 	time.Sleep(100 * time.Millisecond)
 // }
-
 
 // func logger() {
 // 	for entry := range logCh {
@@ -129,15 +128,15 @@ import (
 )
 
 const (
-	logInfo = "INFO"
+	logInfo    = "INFO"
 	logWarning = "WARNING"
-	logError = "ERROR"
+	logError   = "ERROR"
 )
 
 type logEntry struct {
-	time time.Time
+	time     time.Time
 	severity string
-	message string
+	message  string
 }
 
 var logCh = make(chan logEntry, 50)
@@ -145,24 +144,23 @@ var doneCh = make(chan struct{})
 
 func main() {
 	go logger()
-	defer func(){
+	defer func() {
 		close(logCh)
 	}()
 	logCh <- logEntry{time.Now(), logInfo, "App is starting"}
-	
+
 	logCh <- logEntry{time.Now(), logInfo, "App is shutting down"}
 	time.Sleep(100 * time.Millisecond)
 	doneCh <- struct{}{}
 }
 
-
 func logger() {
 	for {
 		select {
-			case entry := <-logCh :
-				fmt.Printf("%v - [%v]%v\n", entry.time.Format("2006-01-02T15:04:05"), entry.severity, entry.message)
-			case <-doneCh:
-				break
+		case entry := <-logCh:
+			fmt.Printf("%v - [%v]%v\n", entry.time.Format("2006-01-02T15:04:05"), entry.severity, entry.message)
+		case <-doneCh:
+			break
 			// default:
 			// 	fmt.Println("Default")
 		}

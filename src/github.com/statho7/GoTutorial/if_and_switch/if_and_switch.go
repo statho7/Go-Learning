@@ -9,7 +9,7 @@ func returnTrue() bool {
 	return true
 }
 
-func main()  {
+func main() {
 	// if false {
 	// 	fmt.Println("The test is true")
 	// } else {
@@ -38,7 +38,7 @@ func main()  {
 	// 	fmt.Println("The guess must be greater than 1")
 	// } else if guess > 100 {
 	// 	fmt.Println("The guess must be less than 100")
-	// } else {	
+	// } else {
 	// 	if guess < number {
 	// 		fmt.Println("Too low!")
 	// 	}
@@ -48,7 +48,7 @@ func main()  {
 	// 	if guess == number {
 	// 		fmt.Println("You got it!")
 	// 	}
-		
+
 	// 	fmt.Println(number <= guess, number >= guess, number != guess)
 	// }
 
@@ -56,31 +56,31 @@ func main()  {
 
 	myNum := 0.123
 	// if myNum == math.Pow(math.Sqrt(myNum), 2){
-	if math.Abs(myNum / math.Pow(math.Sqrt(myNum), 2) - 1 ) < 0.001{
+	if math.Abs(myNum/math.Pow(math.Sqrt(myNum), 2)-1) < 0.001 {
 		fmt.Println("These are the same")
 	} else {
 		fmt.Println("These are different")
 	}
-	
+
 	switch returnTrue() {
 	case true:
 		fmt.Println("Yolo")
-		// fallthrough ---> bad, too bad be careful 
+		// fallthrough ---> bad, too bad be careful
 	case false:
-		fmt.Println("Swag")		
+		fmt.Println("Swag")
 	default:
 		fmt.Println("Thug")
 	}
-	
-	var i interface{}="1."
+
+	var i interface{} = "1."
 	switch i.(type) {
 	case int:
 		fmt.Println("i is int")
-		// fallthrough ---> bad, too bad be careful 
+		// fallthrough ---> bad, too bad be careful
 	case float64:
-		fmt.Println("i is float64")	
+		fmt.Println("i is float64")
 	case string:
-		fmt.Println("i is string")		
+		fmt.Println("i is string")
 		break
 		fmt.Println("This won't print")
 	default:

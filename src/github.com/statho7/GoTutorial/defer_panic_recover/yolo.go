@@ -8,13 +8,13 @@ package main
 // 	fmt.Println("start")
 // 	fmt.Println("middle")
 // 	fmt.Println("end")
-	
+
 // 	fmt.Println("~*~")
 
 // 	fmt.Println("start")
 // 	defer fmt.Println("middle")
 // 	fmt.Println("end")
-	
+
 // 	fmt.Println("~*~")
 
 // 	defer fmt.Println("start")
@@ -52,11 +52,11 @@ package main
 // 	// a := "start"
 // 	// defer fmt.Println(a)
 // 	// a = "end"
-	
+
 // 	// a, b := 1, 0
 // 	// ans := a / b
 // 	// fmt.Println(ans)
-	
+
 // 	fmt.Println("start")
 // 	panic("Something bad happened")
 // 	fmt.Println("end")
@@ -81,12 +81,12 @@ package main
 // 	"log"
 // )
 
-// func main() {	
+// func main() {
 // 	// fmt.Println("start")
 // 	// defer fmt.Println("this was deferred")
 // 	// panic("Something bad happened")
 // 	// fmt.Println("end")
-	
+
 // 	fmt.Println("start")
 // 	defer func() {
 // 		if err:= recover(); err != nil {
@@ -102,7 +102,7 @@ import (
 	"log"
 )
 
-func main() {	
+func main() {
 	fmt.Println("start")
 	panicker()
 	fmt.Println("end")
@@ -111,7 +111,7 @@ func main() {
 func panicker() {
 	fmt.Println("about to panic!")
 	defer func() {
-		if err:= recover(); err != nil {
+		if err := recover(); err != nil {
 			log.Println("Error:", err)
 			// panic(err)
 		}

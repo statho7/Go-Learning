@@ -120,9 +120,9 @@ const (
 	canSeeSouthAmerica
 )
 
-func main()  {
+func main() {
 	var roles byte = isAdmin | canSeeFinancials | canSeeEurope
 	fmt.Printf("%b\n", roles)
-	fmt.Printf("Is Admin ? %v\n", isAdmin & roles == isAdmin)
-	fmt.Printf("Is HQ ? %v", isHeadquarters & roles == isHeadquarters)
+	fmt.Printf("Is Admin ? %v\n", isAdmin&roles == isAdmin)
+	fmt.Printf("Is HQ ? %v", isHeadquarters&roles == isHeadquarters)
 }
